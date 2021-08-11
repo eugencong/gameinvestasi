@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<h1>Test your investment knowledge!</h1>
+<link rel="stylesheet" href="style.css">
+
+<FORM NAME="WordForm">  
+<INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+<INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
+</FORM>
+</body>
+<script type="text/javascript">
+	var NumberOfWords = 28
+
+var words = new BuildArray(NumberOfWords)
+
+words[1] = "ketika pensiun atau jelang hari tua, bagaimana kita akan mulai hidup dengan investasi kita?"
+words[2] = "rekomendasi buku tentang cara memulai investasi?"
+words[3] = "Berapa banyak uang yang diperlukan untuk mulai investasi?"
+words[4] = "apa itu reksadana?"
+words[5] = "siapakah itu manajer investasi?"
+words[6] = "apa itu RDPU?"
+words[7] = "Apa itu Saham?"
+words[8] = "berapa minimal untuk membeli saham?"
+words[9] = "apa resik dari investasi saham?"
+words[10] = "Apa yang Dimaksud Perusahaan Sekuritas?"
+words[11] = "Apakah Transaksi Jual Saham kena Pajak?"
+words[12] = "apakah perbedaan RDPU dengan reksadana obligasi"
+words[13] = "apa yang dimaksud peer to peer lending?"
+words[14] = "apa saja resiko peer to peer lending?"
+words[15] = "apa perbedaan SBR dan ORI?"
+words[16] = "apa perbedaan perbedaan reksadana syariah dan konvensional?"
+words[17] = "Ke mana saja dana reksa dana diinvestasikan?"
+words[18] = "jelaskan apa yang dimaksud Forex?"
+words[19] = "Jelaskan apa itu Cryptocurrency?"
+words[20] = "jelaskan apa yang dimaksud Auto Trading Forex?"
+words[21] = "apa yang dimaksud dengan deposito?"
+words[22] = "sebutkan jenis jenis investasi yang bisa dilakukan minimal 5"
+words[23] = "sebutkan salah satu instrumen investasi jangka panjang"
+words[24] = "apakah keuntungan investasi properti"
+words[25] = "sebutkan investasi jangka pendek"
+words[26] = "apakah asuransi termasuk instrumen investasi?"
+words[27] = "apa itu financial freedom?"
+words[28] = "kenapa investasi harus dilindungi OJK?"
+
+function BuildArray(size){
+this.length = size
+for (var i = 1; i <= size; i++){
+this[i] = null}
+return this
+}
+
+function PickRandomWord(frm) {
+
+var rnd = Math.ceil(Math.random() * NumberOfWords)
+
+
+frm.WordBox.value = words[rnd]
+}
+</script>
+</html>
